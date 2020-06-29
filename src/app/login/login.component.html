@@ -1,0 +1,29 @@
+
+<div class="box">
+    <form class="formulario" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="email" formControlName="email" id="" placeholder="Ingrese su email" ng-model="text">
+            <div *ngIf="submited && loginForm.controls.email.errors">
+            <div *ngIf="loginForm.controls.email.errors.required">Debe ingresar un email válido</div>
+            <div *ngIf="loginForm.controls.email.errors.email">Email debe ser válido</div>
+        </div>
+        <br><br>
+        <input type="password" formControlName="password" id="" placeholder="Ingrese su contraseña" ng-model="text">
+            <div *ngIf="submited && loginForm.controls.password.errors">
+                <div *ngIf="loginForm.controls.password.errors.required">Por favor ingrese una constraseña</div>
+                <div *ngIf="loginForm.controls.password.errors.minlength">La contraseña debe contener un mínimo de 8 caracteres</div>
+            </div>    
+        <br><br>
+        <button type="submit">Ingresar</button>
+        <div *ngIf="submited && !loginForm.controls.email.errors && !loginForm.controls.password.errors">Estás logueado!</div>
+        
+            <p *ngIf="submited">Datos "Post":
+            <br>
+            <span>Este es tu mail: {{loginForm.controls.email.value}}</span>
+            <br>
+            <span>Este esta es tu contraseña: {{loginForm.controls.password.value}}</span>
+            </p>
+    </form>
+</div>
+
+<!-- {{ loginForm.controls.email.value }} -->
+

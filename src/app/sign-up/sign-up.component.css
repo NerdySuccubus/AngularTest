@@ -1,0 +1,36 @@
+.box{
+    display: flex;
+    justify-content: center;
+    border-color: black;
+    border-width: 2px;
+    padding: 100px;
+}
+
+
+form {
+    display: block;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+    border: 5px;
+    border-color: black;
+}
+
+
+.formulario{
+    text-align: center;
+}
+
+.formulario input{
+    border-radius: 2px;
+    border-width: 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+.formulario button{
+    border-radius: 2px;
+    border-width: 1px;
+    padding: 8px;
+
+}

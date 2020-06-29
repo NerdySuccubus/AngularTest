@@ -1,0 +1,31 @@
+
+<div class="box">
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="formulario">
+    <input type="email" formControlName="email" id="" placeholder="Ingrese su e-mail" ng-model="text">
+    <div *ngIf="submited && signupForm.controls.email.errors">
+        <div *ngIf="signupForm.controls.email.errors.required">Debe ingresar un email válido</div>
+        <div *ngIf="signupForm.controls.email.errors.email">Email debe ser válido</div>
+    </div>
+    <br><br>
+    <input type="email" formControlName="confirmemail" id="" placeholder="Confirme su e-mail" ng-model="text">
+    <div *ngIf="submited && signupForm.controls.confirmemail.errors">
+        <div *ngIf="signupForm.controls.confirmemail.errors.required">Debe ingresar un email válido</div>
+        <div *ngIf="signupForm.controls.confirmemail.errors.email">El e-mail debe ser el mismo</div>
+    </div>
+    <br><br>
+    <input type="password" formControlName="password" id="" placeholder="Ingrese su contraseña" ng-model="text">
+    <div *ngIf="submited && signupForm.controls.password.errors">
+        <div *ngIf="signupForm.controls.password.errors.required">Por favor ingrese una constraseña</div>
+        <div *ngIf="signupForm.controls.password.errors.minlength">La contraseña debe contener un mínimo de 8 caracteres
+        </div>
+    </div>
+    <br><br>
+    <button type="submit">Ingresar</button>
+    <div *ngIf="submited && !confirmedEmail">El email no fue confirmado</div>
+    <div *ngIf="submited && !signupForm.controls.email.errors && !signupForm.controls.password.errors">Estás registrado!
+    </div>
+    <div *ngIf="submited">Este es tu mail: {{signupForm.controls.email.value}}</div>
+    <div *ngIf="submited">Este es tu mail de confirmación:{{signupForm.controls.confirmemail.value}}</div>
+    <div *ngIf="submited">Este esta es tu contraseña:{{signupForm.controls.password.value}}</div>
+</form>
+</div>

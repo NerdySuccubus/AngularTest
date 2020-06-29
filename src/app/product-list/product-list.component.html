@@ -1,0 +1,22 @@
+<!-- <p>product-list works!</p> -->
+
+<div class="productList">
+    <ul *ngIf="products" class="product">
+        <li *ngFor="let product of products | slice:0:4">
+            <img [src]="product.thumbnailUrl" class="product-img" height="200px">
+            <p><a [href]="product.url" target="_blank">{{ product.title }}</a> 
+                <br>
+                <br>
+                {{product.price}}
+                <br>
+                <br>
+            <a  [routerLink]="['/product', product.id]" class="boton">Ver detalle</a>
+            
+            
+            </p>
+        </li>
+    </ul>
+</div>
+
+
+

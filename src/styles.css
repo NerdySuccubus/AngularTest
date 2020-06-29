@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&family=Roboto:wght@100&display=swap');
+
+*{
+    margin:0
+}
+
+
+/* header {
+background: rgb(4, 148, 158);
+display:flex;
+max-height: 50px;
+}
+
+nav {
+justify-self: right;
+background-color: rgb(4, 148, 158);
+max-height: 50px;
+color: #FFFFFF;
+
+}
+
+ul {
+list-style-type: none;
+margin: 0; padding: 0;
+}
+
+li {
+float: left;
+}
+
+li a {
+padding: 1.5em;
+text-transform: uppercase;
+font-size: 16px;
+}
+
+li a:hover {
+background:rgb(4, 148, 158);
+color: #FFFFFF;
+} */

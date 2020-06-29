@@ -1,0 +1,18 @@
+
+<div class="producto">
+    <div class="imagen">
+        <img [src]="product.thumbnailUrl" class="product-img" height="200px">
+    </div>
+
+    <div class="detalles">
+        <p><a [href]="product.url" target="_blank">{{ product.title }}</a>
+            <br>
+            <br>
+            {{product.price}}
+            <br>
+            <br>
+            <a [routerLink]="['/product', product.id]" class="boton">Agregar al carrito</a>
+        </p>
+    </div>
+</div>
+
